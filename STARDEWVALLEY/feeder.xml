@@ -6,14 +6,16 @@
 <description>Página de noticias de Stardew Valley</description>
 <item>
 <title>Festival del Huevo</title>
-<link>https://github.com/Marpuchy/RepasoExamen.git</link>
+<link>https://es.stardewvalleywiki.com/Festival_del_huevo</link>
 <description>El Festival del huevo es un festival que tiene lugar el día 13 de cada Primavera a las 9:00AM en la plaza de Pueblo Pelícano. Al igual que otros festivales, el evento dura la mayor parte del día y consta de dos partes: una parte social y una actividad de búsqueda de huevos para terminar el día. El festival terminará inmediatamente después de la búsqueda de huevos y el jugador regresará a la granja a las 10 p. M.</description>
 </item>
 <item>
 <title>Danza Floral</title>
-<link>https://github.com/Marpuchy/RepasoExamen.git</link>
+<link>https://es.stardewvalleywiki.com/Danza_floral</link>
 <description>La Danza Floral es un festival que tiene lugar el día 24 de cada Primavera entre 9:00AM y las 2:00PM, en el este del Bosque Tizón, cruzando el puente al sur de la Torre del Mago, esta área solo es accesible durante la danza floral. Empezará cuando entres al bosque.</description>
+<Image>
+<img src="https://stardewvalleywiki.com/mediawiki/images/thumb/2/20/Egg_Festival.png/750px-Egg_Festival.png"/>
+</Image>
 </item>
-
 </channel>
 </rss>
