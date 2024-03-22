@@ -1,0 +1,132 @@
+* {
+    margin: 6px;
+    font-family: sans-serif;
+}
+
+section, nav{
+   background-color: rgba(78, 192, 240, 0.35);
+    vertical-align: middle;
+    align-items: center;
+    margin: auto 10% ; 
+}
+.centrar{
+    vertical-align: middle;
+    margin: auto 10% ;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+input, textarea, option, select   {
+    background-color: rgba(204, 255, 204, 0.9);
+    color: black;
+}
+ol{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li{
+    background-color: rgba(9, 47, 63, 0.9);
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+p, label, legend {
+    font-size: 18px;
+}
+.si{
+    display: inline-block;
+
+}
+.imagen{
+    float: right;
+    width: 40%;
+    margin-right:5% ;
+}
+.textoCreacion{
+    float: left;
+    width: 40%;
+    margin-left: 5%;
+
+}
+tbody {
+    background-color: rgba(250, 250, 179, 0.8);
+}
+.imatge{
+    margin: auto auto;
+    height:600px;
+    width: 800px;
+    display: flex;
+}
+html {
+    background-image: url("./multimedia/fondonegro.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+thead {
+    background-color: rgba(204, 255, 204, 0.7);
+    text-align: center;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+table,
+th,
+td {
+    margin: 10px auto;
+}
+
+th,
+td {
+    border: 2px solid rgba(40, 143, 57, 0.7);
+    border-spacing: 1px;
+    padding: 5px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+@import url('https://db.onlinewebfonts.com/c/ace87566a523960287b20a3f9c064cb9?family=FFF+Forward');
+
+@font-face {
+    font-family: "FFF Forward";
+    src: url("https://db.onlinewebfonts.com/t/ace87566a523960287b20a3f9c064cb9.eot");
+    src: url("https://db.onlinewebfonts.com/t/ace87566a523960287b20a3f9c064cb9.eot?#iefix") format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/ace87566a523960287b20a3f9c064cb9.woff2") format("woff2"),
+        url("https://db.onlinewebfonts.com/t/ace87566a523960287b20a3f9c064cb9.woff") format("woff"),
+        url("https://db.onlinewebfonts.com/t/ace87566a523960287b20a3f9c064cb9.ttf") format("truetype"),
+        url("https://db.onlinewebfonts.com/t/ace87566a523960287b20a3f9c064cb9.svg#FFF Forward") format("svg");
+}
+
+h1,
+h2,
+h3 {
+    font-family: "FFF Forward";
+}
+h4{
+    font-size: 20px;
+}
+@media (max-with:599px){
+    body {
+        background-color: lightblue;
+    }
+}
