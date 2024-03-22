@@ -84,6 +84,7 @@ table,
 th,
 td {
     margin: 10px auto;
+    table-layout: fixed;
 }
 
 th,
@@ -125,8 +126,30 @@ h3 {
 h4{
     font-size: 20px;
 }
-@media (max-with:599px){
-    body {
-        background-color: lightblue;
-    }
+@media (max-width: 768px) {
+    /*cambiamos el tamaño de la imagen para que no exceda el tamaño de la pantalla*/
+.responsive{
+    max-width: 100%;
+    height: auto;
+}
+video {
+    max-width: 100%;
+    height: auto;
+}
+td {
+    margin: 10px auto;
+    table-layout: fixed;
+    line-height: 1.4; /*ajustar la linea para quese vea mejor en los demás dispositivos*/
+}
+p, label, legend {
+    font-size: 18px;
+    line-height: 1.4; /*ajustar la linea para quese vea mejor en los demás dispositivos*/
+    font-size: 4vw; /* 4% of the viewport width */
+}
+a{
+    color: white;
+    text-decoration: none;
+    line-height: 1.4; /*ajustar la linea para quese vea mejor en los demás dispositivos*/
+    font-size: 4vw; /* 4% of the viewport width */
+}
 }
