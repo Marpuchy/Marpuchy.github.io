@@ -105,6 +105,15 @@ h1 {
 h3 {
     font-size: 20px;
 }
+video {
+    margin: auto 10%;
+    max-width: 100%;
+    height: auto;
+}
+audio{
+    margin: 0 auto;
+    max-width: 100%;
+}
 
 @import url('https://db.onlinewebfonts.com/c/ace87566a523960287b20a3f9c064cb9?family=FFF+Forward');
 
@@ -126,30 +135,46 @@ h3 {
 h4{
     font-size: 20px;
 }
-@media (max-width: 768px) {
+
+/*para moviles y tablets*/
+@media (max-width: 767px) {
     /*cambiamos el tamaño de la imagen para que no exceda el tamaño de la pantalla*/
 .responsive{
     max-width: 100%;
     height: auto;
 }
+
+
 video {
+    margin: 0 auto;
     max-width: 100%;
     height: auto;
 }
+audio{
+    margin: 0 auto;
+    max-width: 100%;
+}
+
 td {
-    margin: 10px auto;
+    margin: 0 0;
     table-layout: fixed;
     line-height: 1.4; /*ajustar la linea para quese vea mejor en los demás dispositivos*/
 }
-p, label, legend {
-    font-size: 18px;
+p{
     line-height: 1.4; /*ajustar la linea para quese vea mejor en los demás dispositivos*/
-    font-size: 4vw; /* 4% of the viewport width */
+    font-size: 4vw; /* 4%  */
 }
 a{
     color: white;
     text-decoration: none;
     line-height: 1.4; /*ajustar la linea para quese vea mejor en los demás dispositivos*/
-    font-size: 4vw; /* 4% of the viewport width */
+    font-size: 4vw; /* 4% */
+}
+table,
+th{
+    margin: 10% auto;
+    table-layout: fixed;
+    max-width: 80%;
+
 }
 }
