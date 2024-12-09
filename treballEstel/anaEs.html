@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<script src="script.js"></script>
+<header>
+    <h1>Edificio Onda, calle Sicilia Nº9.</h1>
+</header>
+
+<main class="main-content">
+    <nav class="sidenav">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="memDesc.html">Memoria descriptiva</a></li>
+            <li><a href="memCons.html">Memoria Constructiva</a></li>
+            <li><a href="anaEs.html">Análisis estructural</a></li>
+            <li><a href="exprGraf.html">Expresión gráfica II</a></li>
+            <li><a href="materales.html">Materiales</a></li>
+            <li><a href="ODS.html">Análisis de la contribución de los ODS</a></li>
+            <li><a href="Equipo.html">Equipo</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <!-- Aquí se insertará el contenido específico de cada página -->
+        <div class="container">
+            <nav class="MCnav">
+                <ul>
+                    <li><a href="#" data-target="container1">Distribución de cargas en las distintas plantas</a></li>
+                    <li><a href="#" data-target="container2">Diagrama de momentos flectores</a></li>
+                    <li><a href="#" data-target="container3">Diagrama de esfuerzos cortantes</a></li>
+                </ul>
+            </nav>
+
+            <div id="container1" class="containerMC active">
+                <div class="AEcontainer">
+                    <img src="images/ae2.png">
+                    <img src="images/ae1.png">
+                </div>
+            </div>
+            <div id="container2" class="containerMC">
+                <div class="AEcontainer">
+                    <img src="images/ae3.png">
+                </div>
+            </div>
+            <div id="container3" class="containerMC">
+                <div class="AEcontainer">
+                    <img src="images/ae4.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
