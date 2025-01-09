@@ -94,6 +94,7 @@ a{
     margin-bottom: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     color: #2b2b2b;
+    align-items: center;
 }
 
 /* Línea de tiempo para formación y experiencia */
@@ -122,6 +123,15 @@ footer {
     margin-top: 40px;
     font-size: 1em;
     color: #7f8c8d;
+}
+.icon{
+    width: auto;
+    height: 20px;
+    margin-right: 10px;
+}
+.contact div {
+    display: flex;
+    flex-direction: row;
 }
 
 /* Media Queries: Ajustes para pantallas pequeñas */
