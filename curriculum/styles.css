@@ -35,6 +35,9 @@ body {
 
 /* Estilos de la imagen de perfil */
 .profile-picture {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: top;
     width: 100%;
     height: auto;
     border-radius: 50%;
