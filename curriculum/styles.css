@@ -1,9 +1,11 @@
+/* Reinicio de estilos básicos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos globales del cuerpo */
 body {
     font-family: 'Roboto', sans-serif;
     color: #2b2b2b;
@@ -12,6 +14,7 @@ body {
     line-height: 1.6;
 }
 
+/* Contenedor principal */
 .container {
     display: flex;
     max-width: 1200px;
@@ -22,6 +25,7 @@ body {
     overflow: hidden;
 }
 
+/* Estilos de la sección izquierda */
 .left-section {
     background-color: #35495e;
     color: #ffffff;
@@ -29,6 +33,7 @@ body {
     width: 30%;
 }
 
+/* Estilos de la imagen de perfil */
 .profile-picture {
     width: 100%;
     height: auto;
@@ -37,12 +42,14 @@ body {
     border: 5px solid #ecf0f1;
 }
 
+/* Estilos de la sección derecha */
 .right-section {
     padding: 40px;
     width: 70%;
     background-color: #fafafa;
 }
 
+/* Encabezado principal */
 .header {
     text-align: right;
     margin-bottom: 40px;
@@ -59,6 +66,7 @@ body {
     color: #7f8c8d;
 }
 
+/* Títulos dentro de la sección derecha */
 .right-section h3 {
     font-size: 1.5em;
     margin-bottom: 20px;
@@ -68,6 +76,7 @@ body {
     padding-bottom: 10px;
 }
 
+/* Bloques de habilidades, contacto, idiomas y software */
 .skills, .contact, .languages, .softwares {
     margin-bottom: 30px;
 }
@@ -81,6 +90,7 @@ body {
     color: #2b2b2b;
 }
 
+/* Línea de tiempo para formación y experiencia */
 .timeline {
     padding-left: 20px;
     position: relative;
@@ -93,15 +103,86 @@ body {
     border-bottom: 1px solid #ecf0f1;
 }
 
+/* Estilos para títulos de trabajo en la línea de tiempo */
 .job-title {
     font-weight: bold;
     font-size: 1.2em;
     color: #34495e;
 }
 
+/* Estilos del pie de página */
 footer {
     text-align: center;
     margin-top: 40px;
     font-size: 1em;
     color: #7f8c8d;
+}
+
+/* Media Queries: Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    body {
+        margin: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 20px;
+    }
+
+    .header {
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .header h2 {
+        font-size: 1em;
+    }
+
+    .right-section h3 {
+        font-size: 1.3em;
+        margin-top: 20px;
+    }
+
+    .timeline div {
+        margin-bottom: 20px;
+    }
+
+    footer {
+        font-size: 0.9em;
+        margin-top: 20px;
+    }
+}
+
+/* Media Queries: Ajustes para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+
+    .header h1 {
+        font-size: 1.8em;
+    }
+
+    .header h2 {
+        font-size: 0.9em;
+    }
+
+    .skills div, .contact div, .languages div, .softwares div {
+        font-size: 0.9em;
+        padding: 10px;
+    }
 }
