@@ -19,7 +19,7 @@ body {
     display: flex;
     max-width: 1200px;
     margin: auto;
-    background: #ffffff;
+    background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
