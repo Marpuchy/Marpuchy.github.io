@@ -172,7 +172,7 @@ async function fillForm() {
     classField.setText(selectedClass)
 
     let species = document.getElementById("race").value
-    let speciesList = []
+    let speciesList = ["Dwarf", "Dragonborn", "Elf", "Gnome", "Goliath", "Halfling", "Tiefling"]
     let subrace = document.getElementById("subrace").value
     if (speciesList.includes(species)) {
         speciesField.setText(subrace + " " + species)
@@ -191,7 +191,15 @@ async function fillForm() {
         }
     }
 
-    sizeField.setText("")
+    const smallList = ["Gnome", "Halfling", "Dwarf"]
+    const otherList = ["Aasimar", "Human", "Tiefling"]
+    if (smallList.includes(species)) {
+        sizeField.setText("Small")
+    } else if (otherList.includes(species)) {
+        sizeField.setText("")
+    }else {
+        sizeField.setText("Medium")
+    }
 
     levelField.setText('1')
     proficiencyField.setText('+' + proficiencyBonus)
