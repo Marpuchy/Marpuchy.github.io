@@ -586,7 +586,7 @@ function updateSkillOptions() {
 
     // Function to populate dropdowns
     function populateDropdown(dropdown, selectedSkill) {
-        dropdown.innerHTML = `<option value="">--Select Skill--</option>`;
+        dropdown.innerHTML = `<option value="">--Selecciona competencia--</option>`;
         filteredSkills.forEach(skill => {
             const option = document.createElement('option');
             option.value = skill;
