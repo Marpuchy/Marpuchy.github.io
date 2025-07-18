@@ -257,7 +257,7 @@ function clearStats() {
     for (let i = 1; i <= 6; i++) {
         values[i - 1] = 8
         mods[i - 1] = 0;
-        document.getElementById("mod" + i).innerText = "0";
+        document.getElementById("value" + i).innerText = "0";
         updateDisplay(i);
     }
     updateTotals();
