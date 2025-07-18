@@ -252,7 +252,6 @@ function classStats() {
 function clearStats() {
     initialPricePool = 27
     pricePool = initialPricePool;
-    removeRestrictions.checked = false;
     restricted = true
     modifierPool = 3;
     for (let i = 1; i <= 6; i++) {
