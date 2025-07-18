@@ -30,468 +30,366 @@
     </script>
 </head>
 <body class="small-screen-fix">
-
-<h1>Constructor de Personajes de Dungeons and Dragons 5a Edición 2024</h1>
-
-<div class="player-form">
-    <label for="playerName">Nombre del Personaje:</label>
-    <input type="text" id="playerName" name="playerName" placeholder="Ingresa el nombre del personaje">
-
-    <p>Estas son solo plantillas, luego al generar el pdf puedes cambiar cosas, y al pasar la hoja en la vida real puedes poner a mano lo que te dé la gana</p>
-    <label for="race">Especie:</label>
-    <select id="race" name="race" onchange="handleRaceChange()">
-        <option value="" disabled selected>Selecciona tu especie</option>
-        <option value="Aarakocra">Aarakocra</option>
-        <option value="Aasimar">Aasimar</option>
-        <option value="Dragonborn">Dracónido</option>
-        <option value="Dwarf">Enano</option>
-        <option value="Elf">Elfo</option>
-        <option value="Gnome">Gnomo</option>
-        <option value="Goliath">Goliat</option>
-        <option value="Half-Elf">Semielfo</option>
-        <option value="Half-Orc">Semiorco</option>
-        <option value="Halfling">Mediano</option>
-        <option value="Human">Humano</option>
-        <option value="Kalashtar">Kalashtar</option>
-        <option value="Minotaur">Minotauro</option>
-        <option value="Orc">Orco</option>
-        <option value="Tabaxi">Tabaxi</option>
-        <option value="Tiefling">Tiefling</option>
-        <option value="Triton">Tritón</option>
-        <option value="Warforged">Warforged</option>
-    </select>
-
-    <!-- El menú desplegable de subraza estará oculto inicialmente -->
-    <div id="subrace-container" style="display: none;">
-        <label for="subrace">Subraza:</label>
-        <select id="subrace" name="subrace">
-            <!-- Las opciones se insertarán dinámicamente basándose en la raza -->
-        </select>
+<!-- Cabecera -->
+<header class="dnd-header">
+    <h1 class="dnd-title">📜 Forjador de Héroes 🏰<br><span class="dnd-subtitle">Dungeons & Dragons 5ª Edición 2024</span></h1>
+    <div class="dnd-divider">
+        <div class="divider-left"></div>
+        <div class="dnd-icon">⚔️</div>
+        <div class="divider-right"></div>
     </div>
+</header>
 
-    <label for="class">Clase:</label>
-    <select id="class" name="class" onchange="updateClassFeatures()">
-        <option value="" disabled selected>Selecciona tu clase</option>
-        <option value="Artificiero">Artificiero</option>
-        <option value="Bárbaro">Bárbaro</option>
-        <option value="Bardo">Bardo</option>
-        <option value="Clérigo">Clérigo</option>
-        <option value="Druida">Druida</option>
-        <option value="Guerrero">Guerrero</option>
-        <option value="Monje">Monje</option>
-        <option value="Paladín">Paladín</option>
-        <option value="Guardabosques">Guardabosques</option>
-        <option value="Pícaro">Pícaro</option>
-        <option value="Hechicero">Hechicero</option>
-        <option value="Brujo">Brujo</option>
-        <option value="Mago">Mago</option>
-    </select>
-</div>
+<!-- Contenido principal -->
+<main class="main-content">
+    <!-- Sección de información básica del personaje -->
+    <section class="character-basic-info">
+        <div class="player-form-horizontal">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="playerName" class="form-label">Nombre del Personaje:</label>
+                    <input type="text" id="playerName" name="playerName" placeholder="Nombre del personaje" class="form-input">
+                </div>
 
+                <div class="form-group">
+                    <label for="race" class="form-label">Especie:</label>
+                    <select id="race" name="race" onchange="handleRaceChange()" class="form-select">
+                        <option value="" disabled selected>Selecciona especie</option>
+                        <option value="Aarakocra">Aarakocra</option>
+                        <option value="Aasimar">Aasimar</option>
+                        <option value="Dragonborn">Dracónido</option>
+                        <option value="Dwarf">Enano</option>
+                        <option value="Elf">Elfo</option>
+                        <option value="Gnome">Gnomo</option>
+                        <option value="Goliath">Goliat</option>
+                        <option value="Half-Elf">Semielfo</option>
+                        <option value="Half-Orc">Semiorco</option>
+                        <option value="Halfling">Mediano</option>
+                        <option value="Human">Humano</option>
+                        <option value="Kalashtar">Kalashtar</option>
+                        <option value="Minotaur">Minotauro</option>
+                        <option value="Orc">Orco</option>
+                        <option value="Tabaxi">Tabaxi</option>
+                        <option value="Tiefling">Tiefling</option>
+                        <option value="Triton">Tritón</option>
+                        <option value="Warforged">Warforged</option>
+                    </select>
+                </div>
 
-<div style="display: flex;flex-direction: row;">
+                <div id="subrace-container" class="form-group" style="display: none;">
+                    <label for="subrace" class="form-label">Subraza:</label>
+                    <select id="subrace" name="subrace" class="form-select">
+                        <!-- Opciones dinámicas -->
+                    </select>
+                </div>
 
-
-    <div class="container">
-        <div class="table-header">
-            <label for="roleSelect">Seleccionar Trasfondo: </label>
-            <select style="margin-left:10px" id="roleSelect" onchange="updateRole()">
-                <option value="">--Selecciona un Trasfondo--</option>
-                <option value="Acolyte">Acólito (Inteligencia, Sabiduría, Carisma)</option>
-                <option value="Artisan">Artesano (Fuerza, Destreza, Inteligencia)</option>
-                <option value="Charlatan">Charlatán (Destreza, Constitución, Carisma)</option>
-                <option value="Criminal">Criminal (Destreza, Constitución, Inteligencia)</option>
-                <option value="Entertainer">Artista (Fuerza, Destreza, Carisma)</option>
-                <option value="Farmer">Granjero (Fuerza, Constitución, Sabiduría)</option>
-                <option value="Guard">Guardia (Fuerza, Inteligencia, Sabiduría)</option>
-                <option value="Guide">Guía (Destreza, Constitución, Sabiduría)</option>
-                <option value="Hermit">Ermitaño (Constitución, Sabiduría, Carisma)</option>
-                <option value="Merchant">Mercader (Constitución, Inteligencia, Carisma)</option>
-                <option value="Noble">Noble (Fuerza, Inteligencia, Carisma)</option>
-                <option value="Sage">Sabio (Constitución, Inteligencia, Sabiduría)</option>
-                <option value="Sailor">Marinero (Fuerza, Destreza, Sabiduría)</option>
-                <option value="Scribe">Escriba (Destreza, Inteligencia, Sabiduría)</option>
-                <option value="Soldier">Soldado (Fuerza, Destreza, Constitución)</option>
-                <option value="Wayfarer">Viajero (Destreza, Sabiduría, Carisma)</option>
-            </select>
-
-            <div>
-                <button class="class-button" onclick="classStats()">Estadísticas Recomendadas por Clase</button>
+                <div class="form-group">
+                    <label for="class" class="form-label">Clase:</label>
+                    <select id="class" name="class" onchange="updateClassFeatures()" class="form-select">
+                        <option value="" disabled selected>Selecciona clase</option>
+                        <option value="Artificiero">Artificiero</option>
+                        <option value="Bárbaro">Bárbaro</option>
+                        <option value="Bardo">Bardo</option>
+                        <option value="Clérigo">Clérigo</option>
+                        <option value="Druida">Druida</option>
+                        <option value="Guerrero">Guerrero</option>
+                        <option value="Monje">Monje</option>
+                        <option value="Paladín">Paladín</option>
+                        <option value="Guardabosques">Guardabosques</option>
+                        <option value="Pícaro">Pícaro</option>
+                        <option value="Hechicero">Hechicero</option>
+                        <option value="Brujo">Brujo</option>
+                        <option value="Mago">Mago</option>
+                    </select>
+                </div>
             </div>
 
-        </div>
-
-
-        <div style="display:flex">
-            <table class="table-sel">
-                <thead>
-                <tr>
-                    <th class="tab-head" style="width: 16%">Habilidad</th>
-                    <th class="tab-head" style="width: 16%">Puntuación Base</th>
-                    <th class="tab-head" style="width: 10%"></th>
-                    <th class="tab-head" style="width: 16%">Modificador de Trasfondo</th>
-                    <th class="tab-head" style="width: 10%"></th>
-                    <th class="tab-head" style="width: 16%">Total</th>
-                    <th class="tab-head" style="width: 16%">Modificador de Habilidad</th>
-                </tr>
-                </thead>
-                <tbody>
-
-                <tr class="oddRow">
-                    <td>Fuerza</td>
-                    <td>
-                        <div>
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="value" id="value1">8</div>
-                                    </td>
-                                    <td>
-                                        <div class="value-control">
-                                            <button onclick="increment(1)">▲</button>
-                                            <button onclick="decrement(1)">▼</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </td>
-                    <td class="operator">+</td>
-                    <td>
-                        <div class="mod" id="modBox1">
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="value" id="mod1">0</div>
-                                    </td>
-                                    <td>
-                                        <div class="value-control">
-                                            <button onclick="modIncrement(1)">▲</button>
-                                            <button onclick="modDecrement(1)">▼</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </td>
-                    <td class="operator">=</td>
-                    <td class="value" id="total1">8
-                    </td>
-                    <td class="value" id="abilityMod1">-1
-                    </td>
-                </tr>
-
-                <tr class="evenRow">
-                    <td>Destreza</td>
-                    <td>
-                        <div>
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="value" id="value2">8</div>
-                                    </td>
-                                    <td>
-                                        <div class="value-control">
-                                            <button onclick="increment(2)">▲</button>
-                                            <button onclick="decrement(2)">▼</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </td>
-                    <td class="operator">+</td>
-                    <td>
-                        <div class="mod" id="modBox2">
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="value" id="mod2">0</div>
-                                    </td>
-                                    <td>
-                                        <div class="value-control">
-                                            <button onclick="modIncrement(2)">▲</button>
-                                            <button onclick="modDecrement(2)">▼</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </td>
-                    <td class="operator">=</td>
-                    <td class="value" id="total2">8
-                    </td>
-                    <td class="value" id="abilityMod2">-1
-                    </td>
-                </tr>
-
-                <tr class="oddRow">
-                    <td>Constitución</td>
-                    <td>
-                        <div>
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="value" id="value3">8</div>
-                                    </td>
-                                    <td>
-                                        <div class="value-control">
-                                            <button onclick="increment(3)">▲</button>
-                                            <button onclick="decrement(3)">▼</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </td>
-                    <td class="operator">+</td>
-                    <td>
-                        <div class="mod" id="modBox3">
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="value" id="mod3">0</div>
-                                    </td>
-                                    <td>
-                                        <div class="value-control">
-                                            <button onclick="modIncrement(3)">▲</button>
-                                            <button onclick="modDecrement(3)">▼</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </td>
-                    <td class="operator">=</td>
-                    <td class="value" id="total3">8
-                    </td>
-                    <td class="value" id="abilityMod3">-1
-                    </td>
-                </tr>
-
-                <tr class="evenRow">
-                    <td>Inteligencia</td>
-                    <td>
-                        <div>
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="value" id="value4">8</div>
-                                    </td>
-                                    <td>
-                                        <div class="value-control">
-                                            <button onclick="increment(4)">▲</button>
-                                            <button onclick="decrement(4)">▼</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </td>
-                    <td class="operator">+</td>
-                    <td>
-                        <div class="mod" id="modBox4">
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="value" id="mod4">0</div>
-                                    </td>
-                                    <td>
-                                        <div class="value-control">
-                                            <button onclick="modIncrement(4)">▲</button>
-                                            <button onclick="modDecrement(4)">▼</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </td>
-                    <td class="operator">=</td>
-                    <td class="value" id="total4">8
-                    </td>
-                    <td class="value" id="abilityMod4">-1
-                    </td>
-                </tr>
-
-                <tr class="oddRow">
-                    <td>Sabiduría</td>
-                    <td>
-                        <div>
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="value" id="value5">8</div>
-                                    </td>
-                                    <td>
-                                        <div class="value-control">
-                                            <button onclick="increment(5)">▲</button>
-                                            <button onclick="decrement(5)">▼</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </td>
-                    <td class="operator">+</td>
-                    <td>
-                        <div class="mod" id="modBox5">
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="value" id="mod5">0</div>
-                                    </td>
-                                    <td>
-                                        <div class="value-control">
-                                            <button onclick="modIncrement(5)">▲</button>
-                                            <button onclick="modDecrement(5)">▼</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </td>
-                    <td class="operator">=</td>
-                    <td class="value" id="total5">8
-                    </td>
-                    <td class="value" id="abilityMod5">-1
-                    </td>
-                </tr>
-
-                <tr class="evenRow">
-                    <td>Carisma</td>
-                    <td>
-                        <div>
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="value" id="value6">8</div>
-                                    </td>
-                                    <td>
-                                        <div class="value-control">
-                                            <button onclick="increment(6)">▲</button>
-                                            <button onclick="decrement(6)">▼</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </td>
-                    <td class="operator">+</td>
-                    <td>
-                        <div class="mod" id="modBox6">
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="value" id="mod6">0</div>
-                                    </td>
-                                    <td>
-                                        <div class="value-control">
-                                            <button onclick="modIncrement(6)">▲</button>
-                                            <button onclick="modDecrement(6)">▼</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </td>
-                    <td class="operator">=</td>
-                    <td class="value" id="total6">8
-                    </td>
-                    <td class="value" id="abilityMod6">-1
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-            <div class="price-pool">
-                <p class="display-points">Puntos Totales: <br><br><span id="pricePool">27 / 27</span></p><br>
-                <p class="display-points">Puntos de<br>Trasfondo: <br><br><span id="modifierPool">3 / 3</span></p>
+            <div class="form-note">
+                <p>Estas son solo plantillas. Al generar el PDF puedes cambiar cosas, y en la hoja física puedes modificar lo que necesites.</p>
             </div>
         </div>
-        <button style="margin:auto" class="class-button" onclick="clearStats()">Reinicar</button>
+    </section>
 
+    <!-- Sección de atributos y habilidades -->
+    <section class="attributes-section">
+        <div class="container">
+            <div class="table-header">
+                <label for="roleSelect" class="form-label">Seleccionar Trasfondo: </label>
+                <select id="roleSelect" onchange="updateRole()" class="form-select">
+                    <option value="">--Selecciona un Trasfondo--</option>
+                    <option value="Acolyte">Acólito (Inteligencia, Sabiduría, Carisma)</option>
+                    <option value="Artisan">Artesano (Fuerza, Destreza, Inteligencia)</option>
+                    <option value="Charlatan">Charlatán (Destreza, Constitución, Carisma)</option>
+                    <option value="Criminal">Criminal (Destreza, Constitución, Inteligencia)</option>
+                    <option value="Entertainer">Artista (Fuerza, Destreza, Carisma)</option>
+                    <option value="Farmer">Granjero (Fuerza, Constitución, Sabiduría)</option>
+                    <option value="Guard">Guardia (Fuerza, Inteligencia, Sabiduría)</option>
+                    <option value="Guide">Guía (Destreza, Constitución, Sabiduría)</option>
+                    <option value="Hermit">Ermitaño (Constitución, Sabiduría, Carisma)</option>
+                    <option value="Merchant">Mercader (Constitución, Inteligencia, Carisma)</option>
+                    <option value="Noble">Noble (Fuerza, Inteligencia, Carisma)</option>
+                    <option value="Sage">Sabio (Constitución, Inteligencia, Sabiduría)</option>
+                    <option value="Sailor">Marinero (Fuerza, Destreza, Sabiduría)</option>
+                    <option value="Scribe">Escriba (Destreza, Inteligencia, Sabiduría)</option>
+                    <option value="Soldier">Soldado (Fuerza, Destreza, Constitución)</option>
+                    <option value="Wayfarer">Viajero (Destreza, Sabiduría, Carisma)</option>
+                </select>
 
-        <!-- Div para mostrar las características de la clase seleccionada -->
-        <div id="class-features" class="class-features">
-            <!-- Las características de clase se poblarán aquí -->
+                <div class="centrar">
+                    <button class="class-button" onclick="classStats()">Estadísticas Recomendadas por Clase</button>
+                </div>
+            </div>
+
+            <div class="attributes-container">
+                <table class="table-sel">
+                    <thead>
+                    <tr>
+                        <th class="tab-head" style="width: 16%">Habilidad</th>
+                        <th class="tab-head" style="width: 16%">Puntuación Base</th>
+                        <th class="tab-head" style="width: 10%"></th>
+                        <th class="tab-head" style="width: 16%">Modificador de Trasfondo</th>
+                        <th class="tab-head" style="width: 10%"></th>
+                        <th class="tab-head" style="width: 16%">Total</th>
+                        <th class="tab-head" style="width: 16%">Modificador de Habilidad</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="oddRow">
+                        <td>Fuerza</td>
+                        <td>
+                            <div class="value-control-container">
+                                <div class="value" id="value1">8</div>
+                                <div class="value-control">
+                                    <button onclick="increment(1)">▲</button>
+                                    <button onclick="decrement(1)">▼</button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="operator">+</td>
+                        <td>
+                            <div class="mod" id="modBox1">
+                                <div class="value-control-container">
+                                    <div class="value" id="mod1">0</div>
+                                    <div class="value-control">
+                                        <button onclick="modIncrement(1)">▲</button>
+                                        <button onclick="modDecrement(1)">▼</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="operator">=</td>
+                        <td class="value" id="total1">8</td>
+                        <td class="value" id="abilityMod1">-1</td>
+                    </tr>
+
+                    <tr class="evenRow">
+                        <td>Destreza</td>
+                        <td>
+                            <div class="value-control-container">
+                                <div class="value" id="value2">8</div>
+                                <div class="value-control">
+                                    <button onclick="increment(2)">▲</button>
+                                    <button onclick="decrement(2)">▼</button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="operator">+</td>
+                        <td>
+                            <div class="mod" id="modBox2">
+                                <div class="value-control-container">
+                                    <div class="value" id="mod2">0</div>
+                                    <div class="value-control">
+                                        <button onclick="modIncrement(2)">▲</button>
+                                        <button onclick="modDecrement(2)">▼</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="operator">=</td>
+                        <td class="value" id="total2">8</td>
+                        <td class="value" id="abilityMod2">-1</td>
+                    </tr>
+
+                    <tr class="oddRow">
+                        <td>Constitución</td>
+                        <td>
+                            <div class="value-control-container">
+                                <div class="value" id="value3">8</div>
+                                <div class="value-control">
+                                    <button onclick="increment(3)">▲</button>
+                                    <button onclick="decrement(3)">▼</button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="operator">+</td>
+                        <td>
+                            <div class="mod" id="modBox3">
+                                <div class="value-control-container">
+                                    <div class="value" id="mod3">0</div>
+                                    <div class="value-control">
+                                        <button onclick="modIncrement(3)">▲</button>
+                                        <button onclick="modDecrement(3)">▼</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="operator">=</td>
+                        <td class="value" id="total3">8</td>
+                        <td class="value" id="abilityMod3">-1</td>
+                    </tr>
+
+                    <tr class="evenRow">
+                        <td>Inteligencia</td>
+                        <td>
+                            <div class="value-control-container">
+                                <div class="value" id="value4">8</div>
+                                <div class="value-control">
+                                    <button onclick="increment(4)">▲</button>
+                                    <button onclick="decrement(4)">▼</button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="operator">+</td>
+                        <td>
+                            <div class="mod" id="modBox4">
+                                <div class="value-control-container">
+                                    <div class="value" id="mod4">0</div>
+                                    <div class="value-control">
+                                        <button onclick="modIncrement(4)">▲</button>
+                                        <button onclick="modDecrement(4)">▼</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="operator">=</td>
+                        <td class="value" id="total4">8</td>
+                        <td class="value" id="abilityMod4">-1</td>
+                    </tr>
+
+                    <tr class="oddRow">
+                        <td>Sabiduría</td>
+                        <td>
+                            <div class="value-control-container">
+                                <div class="value" id="value5">8</div>
+                                <div class="value-control">
+                                    <button onclick="increment(5)">▲</button>
+                                    <button onclick="decrement(5)">▼</button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="operator">+</td>
+                        <td>
+                            <div class="mod" id="modBox5">
+                                <div class="value-control-container">
+                                    <div class="value" id="mod5">0</div>
+                                    <div class="value-control">
+                                        <button onclick="modIncrement(5)">▲</button>
+                                        <button onclick="modDecrement(5)">▼</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="operator">=</td>
+                        <td class="value" id="total5">8</td>
+                        <td class="value" id="abilityMod5">-1</td>
+                    </tr>
+
+                    <tr class="evenRow">
+                        <td>Carisma</td>
+                        <td>
+                            <div class="value-control-container">
+                                <div class="value" id="value6">8</div>
+                                <div class="value-control">
+                                    <button onclick="increment(6)">▲</button>
+                                    <button onclick="decrement(6)">▼</button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="operator">+</td>
+                        <td>
+                            <div class="mod" id="modBox6">
+                                <div class="value-control-container">
+                                    <div class="value" id="mod6">0</div>
+                                    <div class="value-control">
+                                        <button onclick="modIncrement(6)">▲</button>
+                                        <button onclick="modDecrement(6)">▼</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="operator">=</td>
+                        <td class="value" id="total6">8</td>
+                        <td class="value" id="abilityMod6">-1</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div class="points-container">
+                    <div class="price-pool">
+                        <p class="display-points">Puntos Totales: <span id="pricePool">27 / 27</span></p>
+                    </div>
+                    <div class="price-pool">
+                        <p class="display-points">Puntos de Trasfondo: <span id="modifierPool">3 / 3</span></p>
+                    </div>
+                </div>
+            </div>
+            <button class="class-button reset-button" onclick="clearStats()">Reiniciar</button>
+
+            <!-- Características de la clase -->
+            <div id="class-features" class="class-features">
+                <!-- Las características de clase se poblarán aquí -->
+            </div>
+
+            <!-- Selección de habilidades -->
+            <div class="skills-selection">
+                <div class="skill-group">
+                    <label for="skill1" class="form-label">Elegir Competencia en Habilidad 1:</label>
+                    <select id="skill1" onchange="updateSkillOptions2()" class="form-select">
+                        <option value="">--Seleccionar Habilidad--</option>
+                        <!-- Las opciones de habilidad se poblarán dinámicamente -->
+                    </select>
+                </div>
+
+                <div class="skill-group">
+                    <label for="skill2" class="form-label">Elegir Competencia en Habilidad 2:</label>
+                    <select id="skill2" onchange="updateSkillOptions3()" class="form-select">
+                        <option value="">--Seleccionar Habilidad--</option>
+                        <!-- Las opciones de habilidad se poblarán dinámicamente -->
+                    </select>
+                </div>
+
+                <div id="skillBox3" class="skill-group" style="display:none;">
+                    <label for="skill3" class="form-label">Elegir Competencia en Habilidad 3:</label>
+                    <select id="skill3" onchange="updateSkillOptions4()" class="form-select">
+                        <option value="">--Seleccionar Habilidad--</option>
+                        <!-- Las opciones de habilidad se poblarán dinámicamente -->
+                    </select>
+                </div>
+
+                <div id="skillBox4" class="skill-group" style="display:none;">
+                    <label for="skill4" class="form-label">Elegir Competencia en Habilidad 4:</label>
+                    <select id="skill4" class="form-select">
+                        <option value="">--Seleccionar Habilidad--</option>
+                        <!-- Las opciones de habilidad se poblarán dinámicamente -->
+                    </select>
+                </div>
+            </div>
+
+            <button class="class-button generate-button" onclick="fillForm()">Mostrar Hoja de Personaje</button>
         </div>
-        <div>
-            <label for="skill1">Elegir Competencia en Habilidad 1:</label>
-            <select id="skill1" onchange="updateSkillOptions2()">
-                <option value="">--Seleccionar Habilidad--</option>
-                <!-- Las opciones de habilidad se poblarán dinámicamente -->
-            </select>
-        </div>
+    </section>
+</main>
 
-        <div>
-            <label for="skill2">Elegir Competencia en Habilidad 2:</label>
-            <select id="skill2" onchange="updateSkillOptions3()">
-                <option value="">--Seleccionar Habilidad--</option>
-                <!-- Las opciones de habilidad se poblarán dinámicamente -->
-            </select>
-        </div>
-
-        <div id="skillBox3" style="display:none;">
-            <label for="skill3">Elegir Competencia en Habilidad 3:</label>
-            <select id="skill3" onchange="updateSkillOptions4()">
-                <option value="">--Seleccionar Habilidad--</option>
-                <!-- Las opciones de habilidad se poblarán dinámicamente -->
-            </select>
-        </div>
-
-        <div id="skillBox4" style="display:none;">
-            <label for="skill4">Elegir Competencia en Habilidad 4:</label>
-            <select id="skill4">
-                <option value="">--Seleccionar Habilidad--</option>
-                <!-- Las opciones de habilidad se poblarán dinámicamente -->
-            </select>
-        </div>
-
-
-        <button style="margin:auto;margin-top:20px" class="class-button" onclick="fillForm()">Mostrar Hoja de
-            Personaje
-        </button>
-
+<!-- Pie de página -->
+<footer class="site-footer">
+    <div class="footer-content">
+        <p>Este sitio no es un reemplazo del Manual del Jugador de <em>Dungeons and Dragons</em> y solo debe usarse como una herramienta para ayudar con la creación de personajes.</p>
+        <p>Para más información, visita el <a href="https://dnd.wizards.com/" target="_blank">sitio web oficial de Dungeons and Dragons</a>.</p>
     </div>
-</div>
-
-</body>
-<footer style="width: 110%; background-color: #333; color: white; text-align: center; padding: 20px 0; margin-top: 80px;">
-    <div style="padding-bottom: 10px; border-bottom: 1px solid #777;">
-        <p>Este sitio no es un reemplazo del Manual del Jugador de <em>Dungeons and Dragons</em> y solo debe usarse como
-            una herramienta para ayudar con la creación de personajes.</p>
-        <p>Para más información, visita el <a href="https://dnd.wizards.com/" target="_blank" style="color: #1E90FF;">sitio
-            web oficial de Dungeons and Dragons</a>.</p>
-    </div>
-    <div style="padding-top: 10px;">
-        <p>Encuéntrame en <a href="https://x.com/BirddieSoftware" target="_blank" style="color: #1E90FF;">Casa de
-            nicolás</a> | <a href="https://www.reddit.com/user/Birddie721/" target="_blank" style="color: #1E90FF;">La
-            pobla</a></p>
-        <p>Email: <a href="mailto:victornicoláslizarte@gmail.com"
-                     style="color: #1E90FF;">victornicolaslizarte@gmail.com</a></p>
+    <div class="footer-links">
+        <p>Encuéntrame en <a href="https://x.com/BirddieSoftware" target="_blank">Casa de nicolás</a> | <a href="https://www.reddit.com/user/Birddie721/" target="_blank">La pobla</a></p>
+        <p>Email: <a href="mailto:victornicoláslizarte@gmail.com">victornicolaslizarte@gmail.com</a></p>
     </div>
 </footer>
+</body>
 </html>
