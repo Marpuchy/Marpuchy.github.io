@@ -305,8 +305,7 @@ body {
 /* ===== BOTONES ===== */
 .centrar{
 	width: 100%;
-	text-align: center;
-
+	text-align: center
 }
 .class-button {
 	padding: 12px 24px;
@@ -329,6 +328,25 @@ body {
 	background-color: #352104;
 	transform: translateY(-2px);
 	box-shadow: 0 4px 8px var(--shadow-light);
+}
+
+.modifiable {
+	background-color: rgba(255, 255, 0, 0.3); /* Fondo amarillo semitransparente */
+	border-left: 4px solid #FFD700; /* Borde izquierdo dorado */
+	padding: 12px 15px; /* Espaciado interno */
+	box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Sombra dorada */
+	transition: all 0.3s ease; /* Transición suave */
+	animation: pulse 2s infinite alternate; /* Animación de pulsación opcional */
+}
+
+/* Animación de pulsación (opcional) */
+@keyframes pulse {
+	from {
+		box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+	}
+	to {
+		box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+	}
 }
 
 .reset-button {
