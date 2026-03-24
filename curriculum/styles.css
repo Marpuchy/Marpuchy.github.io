@@ -201,7 +201,6 @@ footer {
         font-size: 0.9em;
         padding: 10px;
     }
-}
 @media print {
     body {
         margin: 0;
@@ -236,3 +235,6 @@ footer {
     img {
         max-width: 100%;
     }
+    }
+}
+
