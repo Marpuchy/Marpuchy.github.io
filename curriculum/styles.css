@@ -202,3 +202,37 @@ footer {
         padding: 10px;
     }
 }
+@media print {
+    body {
+        margin: 0;
+        background: white;
+    }
+
+    .container {
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
+    }
+
+    .left-section {
+        width: 30%;
+        padding: 20px;
+    }
+
+    .right-section {
+        width: 70%;
+        padding: 20px;
+    }
+
+    footer {
+        display: none;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    img {
+        max-width: 100%;
+    }
