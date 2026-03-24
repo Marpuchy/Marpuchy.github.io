@@ -3,97 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículum - Marc Ibáñez</title>
-    <link rel="stylesheet" href="styles.css"/>
+    <meta name="description" content="Currículum de Marc Ibáñez, desarrollador de software junior.">
+    <title>Currículum | Marc Ibáñez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
+<main class="resume">
+    <section class="content">
+        <header class="hero">
+            <div class="hero-top">
+                <p class="eyebrow" data-i18n="hero.eyebrow">Currículum Vitae</p>
 
-<div class="container">
-    <!-- Sección izquierda -->
-    <div class="left-section">
-        <img src="img.png" alt="Foto de perfil" class="profile-picture">
+                <div class="language-switcher" aria-label="Language switcher">
+                    <button type="button" class="language-button" data-lang="es">ES</button>
+                    <button type="button" class="language-button" data-lang="en">EN</button>
+                </div>
+            </div>
 
-        <h3>Contacto</h3>
-        <div class="contact">
-            <div><img src="img_5.png" class="icon"> mibanezp0709@gmail.com</div>
-            <div><img src="img_2.png" class="icon"> 642 677 565</div>
-            <div><img src="img_3.png" class="icon"> Carrer Maestrat 5, Vall d’Alba, CP:12194</div>
-            <div><img src="img_1.png" class="icon"> <a href="https://github.com/Marpuchy">Marpuchy</a></div>
-            <div><img src="img_4.png" class="icon"> <a href="https://www.linkedin.com/in/marc-ib%C3%A0%C3%B1ez-0932502aa/">Marc Ibáñez</a></div>
-        </div>
-
-        <h3>Idiomas</h3>
-        <div class="languages">
-            <div>Español - Nativo</div>
-            <div>Inglés - C1</div>
-        </div>
-
-        <h3>Habilidades</h3>
-        <div class="softwares">
-            <div>Habilidad para trabajar en equipo</div>
-            <div>Alta capacidad de adaptación</div>
-            <div>Excel</div>
-            <div>Google Sites</div>
-            <div>WordPress</div>
-            <div>GitHub</div>
-        </div>
-    </div>
-
-    <!-- Sección derecha -->
-    <div class="right-section">
-        <div class="header">
             <h1>Marc Ibáñez</h1>
-            <h2>Estudiante de Desarrollo de Videojuegos en IES El Caminàs</h2>
-        </div>
+            <h2 data-i18n="hero.title">Desarrollador de Software Junior | Frontend &amp; Backend</h2>
+            <p class="summary" data-i18n="hero.summary">
+                Desarrollador de software junior con formación en Desarrollo de Aplicaciones Web en IES El Caminàs y
+                actualmente cursando una especialización en Desarrollo de Videojuegos. He desarrollado proyectos
+                personales de aplicaciones web y software, y realicé prácticas FCT en NTT DATA, donde tuve mi primera
+                experiencia en entorno corporativo. Busco incorporarme a un equipo donde seguir creciendo en frontend,
+                backend o desarrollo general, aportando capacidad de adaptación, aprendizaje continuo y compromiso.
+            </p>
+        </header>
 
-        <h3>Perfil</h3>
-        <p>Estudiante de desarrollo de videojuegos con experiencia en lenguajes de programación web front-end y back-end. Destaco por mi capacidad analítica, creatividad y trabajo en equipo, siempre buscando generar un buen ambiente y comodidad a los de mi entorno.</p>
+        <section class="section">
+            <div class="section-heading">
+                <h3 data-i18n="sections.experience">Experiencia</h3>
+            </div>
 
-        <h3>Estudios</h3>
-        <div class="timeline">
-            <div>
-                <span class="job-title">IES El Caminàs</span> - Desarrollo de videojuegos (2025-Actualidad)
-                <p>En este curso de especialización estoy ampliando mis conocimientos de animación y desarrollo 3D y 2D además de aprender a programar en lenguajes como C#</p>
-            </div>
-            <div>
-                <span class="job-title">IES El Caminàs</span> - Desarrollo de aplicaciones web (2023-2025)
-                <p>En este grado me estoy formando como programador y desarrollador. Gracias a esto, soy capaz de desarrollar webs con lenguajes como HTML, CSS, Java y JavaScript. También he destacado por mi capacidad de autoaprendizaje y adaptación a nuevas tecnologías.</p>
-            </div>
-            <div>
-                <span class="job-title">IES Vall d'Alba</span> - Bachillerato científico-técnico (2021-2023)
-                <p>Durante este periodo, adquirí una sólida base en redacción, ciencias y matemáticas que complementa mis habilidades técnicas. Desarrollé también habilidades en pensamiento crítico y trabajo bajo presión.</p>
-            </div>
-        </div>
+            <article class="entry">
+                <div class="entry-head">
+                    <h4>NTT DATA</h4>
+                    <span data-i18n="experience.ntt.period">Prácticas FCT | Marzo 2025 - Mayo 2025</span>
+                </div>
+                <p data-i18n="experience.ntt.description">
+                    Primera experiencia en un entorno profesional corporativo, con adaptación a dinámicas reales de
+                    trabajo en consultoría tecnológica. Durante este periodo tuve contacto con Kotlin Multiplatform y
+                    Jetpack Compose desde una base de aprendizaje, ampliando mi visión sobre nuevas herramientas y
+                    entornos de desarrollo.
+                </p>
+            </article>
+        </section>
 
-        <h3>Formación</h3>
-        <div class="timeline">
-            <div>
-                <span class="job-title">Programador Frontend</span> - JavaScript/CSS/HTML/jQuery (2022 - Actualidad)
-                <p>Durante mi tiempo formándome como informático, he destacado por mi creatividad y atención al detalle, cualidades que considero esenciales para desarrollar interfaces de usuario intuitivas y atractivas.</p>
+        <section class="section">
+            <div class="section-heading">
+                <h3 data-i18n="sections.projects">Proyectos</h3>
             </div>
-            <div>
-                <span class="job-title">Programador Backend</span> - Java/Python/PHP/C# (2021 - Actualidad)
-                <p>Mis habilidades lógicas y capacidad analítica me permiten resolver problemas complejos y crear soluciones robustas para sistemas backend.</p>
-            </div>
-            <div>
-                <span class="job-title">Prácticas en NTTDATA</span> - FCT (Marzo - Mayo 2025)
-                <p>Durante el periodo de prácticas en la empresa, me he formado en un entorno laboral altamente competitivo, donde he adquirido conocimientos en tecnologías como Kotlin Multiplatform y Jetpack Compose.</p>
-            </div>
-            <div>
-                <span class="job-title">Nivel de inglés</span> - C1 Cambridge (2015-2021)
-                <p>Desde muy joven, el inglés ha estado presente en mi vida, y he viajado a países angloparlantes. Mi fluidez en inglés me permite trabajar en entornos internacionales.</p>
-            </div>
-            <div>
-                <span class="job-title">Pianista</span> - 5 años (2014-2019)
-                <p>Tocar el piano ha fomentado mi capacidad imaginativa y creativa, además de mi habilidad aritmética y disciplina personal. También ha mejorado mis capacidades para trabajar bajo presión al participar en audiciones frente a grandes audiencias.</p>
-            </div>
-        </div>
-    </div>
-</div>
 
-<footer>
-    &copy; 2025 Marc Ibáñez - Currículum
-</footer>
+            <article class="entry">
+                <div class="entry-head">
+                    <h4>Disperson</h4>
+                    <span data-i18n="projects.disperson.type">Proyecto de aplicación web</span>
+                </div>
+                <p data-i18n="projects.disperson.description1">
+                    Aplicación web relacionada con tests de personalidad, con almacenamiento de datos de usuario y
+                    visualización de perfiles interpretativos.
+                </p>
+                <p data-i18n="projects.disperson.description2">
+                    Trabajo centrado en lógica backend, gestión de datos y estructuración de la aplicación.
+                </p>
+                <p class="tech-line"><span class="tech-label" data-i18n="labels.technologies">Tecnologías:</span> PHP, Symfony, Doctrine, Twig, Bootstrap, SQLite</p>
+            </article>
 
+            <article class="entry">
+                <div class="entry-head">
+                    <h4>DND Manager</h4>
+                    <span data-i18n="projects.dndManager.type">Aplicación web</span>
+                </div>
+                <p data-i18n="projects.dndManager.description1">
+                    Aplicación web para la gestión de campañas y personajes.
+                </p>
+                <p data-i18n="projects.dndManager.description2">
+                    Trabajo enfocado en la estructura de la interfaz, componentes reutilizables, manejo de datos y
+                    experiencia de usuario.
+                </p>
+                <p class="tech-line"><span class="tech-label" data-i18n="labels.technologies">Tecnologías:</span> Next.js, TypeScript, JavaScript, CSS, Supabase</p>
+            </article>
+
+            <article class="entry">
+                <div class="entry-head">
+                    <h4>PactumX</h4>
+                    <span data-i18n="projects.pactumx.type">Proyecto personal</span>
+                </div>
+                <p data-i18n="projects.pactumx.description1">
+                    Proyecto personal centrado en programación de sistemas, lógica y arquitectura de código.
+                </p>
+                <p data-i18n="projects.pactumx.description2">
+                    Trabajo orientado a la organización técnica del proyecto y la estructuración del software.
+                </p>
+                <p class="tech-line"><span class="tech-label" data-i18n="labels.technologies">Tecnologías:</span> Unity, C#</p>
+            </article>
+        </section>
+
+        <section class="section">
+            <div class="section-heading">
+                <h3 data-i18n="sections.education">Formación</h3>
+            </div>
+
+            <article class="entry">
+                <div class="entry-head">
+                    <h4>IES El Caminàs</h4>
+                    <span data-i18n="education.daw">CFGS Desarrollo de Aplicaciones Web (DAW) | 2023 - 2025</span>
+                </div>
+            </article>
+
+            <article class="entry">
+                <div class="entry-head">
+                    <h4>IES El Caminàs</h4>
+                    <span data-i18n="education.specialization">Curso de Especialización en Desarrollo de Videojuegos | 2025 - Actualidad</span>
+                </div>
+            </article>
+
+            <article class="entry">
+                <div class="entry-head">
+                    <h4>IES Vall d'Alba</h4>
+                    <span data-i18n="education.bachillerato">Bachillerato Científico-Técnico | 2021 - 2023</span>
+                </div>
+            </article>
+        </section>
+    </section>
+
+    <aside class="sidebar">
+        <img src="img.png" alt="Foto de perfil de Marc Ibáñez" class="profile-picture">
+
+        <section class="panel">
+            <h3 data-i18n="sections.skills">Competencias Técnicas</h3>
+
+            <div class="skill-group">
+                <h4 data-i18n="skills.frontend.title">Frontend</h4>
+                <p data-i18n="skills.frontend.items">HTML5, CSS3, JavaScript, jQuery, diseño responsive</p>
+            </div>
+
+            <div class="skill-group">
+                <h4 data-i18n="skills.backend.title">Backend y Bases de Datos</h4>
+                <p data-i18n="skills.backend.items">Java, PHP, SQL, MySQL</p>
+            </div>
+
+            <div class="skill-group">
+                <h4 data-i18n="skills.tools.title">Herramientas</h4>
+                <p data-i18n="skills.tools.items">Git, GitHub, Bootstrap</p>
+            </div>
+
+            <div class="skill-group">
+                <h4 data-i18n="skills.other.title">Otros conocimientos</h4>
+                <p data-i18n="skills.other.items">C#, XML/RSS, maquetación web y documentación técnica</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h3 data-i18n="sections.languages">Idiomas</h3>
+            <ul class="info-list compact">
+                <li data-i18n="languages.spanish">Español: nativo</li>
+                <li data-i18n="languages.english">Inglés: C1 Cambridge</li>
+            </ul>
+        </section>
+
+        <section class="panel">
+            <h3 data-i18n="sections.additional">Información Adicional</h3>
+            <ul class="info-list compact">
+                <li data-i18n="additional.license">Permiso de conducir y vehículo propio</li>
+                <li data-i18n="additional.interest">Interés en posiciones junior de frontend, backend o desarrollo de software general</li>
+                <li data-i18n="additional.profile">Perfil adaptable, orientado al aprendizaje continuo y al trabajo en equipo</li>
+            </ul>
+        </section>
+
+        <section class="panel">
+            <h3 data-i18n="sections.contact">Contacto</h3>
+            <ul class="info-list">
+                <li class="contact-item">
+                    <img src="img_5.png" alt="" class="contact-icon">
+                    <a href="mailto:mibanezp0709@gmail.com">mibanezp0709@gmail.com</a>
+                </li>
+                <li class="contact-item">
+                    <img src="img_2.png" alt="" class="contact-icon">
+                    <a href="tel:+34642677565">642 677 565</a>
+                </li>
+                <li class="contact-item">
+                    <img src="img_3.png" alt="" class="contact-icon">
+                    <span>Vall d'Alba, Castellón</span>
+                </li>
+                <li class="contact-item">
+                    <img src="img_1.png" alt="" class="contact-icon">
+                    <a href="https://github.com/Marpuchy" target="_blank" rel="noreferrer">github.com/Marpuchy</a>
+                </li>
+                <li class="contact-item">
+                    <img src="img_4.png" alt="" class="contact-icon">
+                    <a href="https://www.linkedin.com/in/marc-ib%C3%A0%C3%B1ez-0932502aa/" target="_blank" rel="noreferrer">linkedin.com/in/marc-ibáñez</a>
+                </li>
+            </ul>
+        </section>
+    </aside>
+</main>
 </body>
 </html>
