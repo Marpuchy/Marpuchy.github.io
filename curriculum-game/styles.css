@@ -218,6 +218,10 @@ a {
     font-size: 1rem;
 }
 
+.print-contact {
+    display: none;
+}
+
 .section {
     margin-top: 24px;
 }
@@ -341,12 +345,19 @@ a {
 
 @page {
     size: A4;
-    margin: 6mm;
+    margin: 12mm;
 }
 
 @media print {
     html {
-        font-size: 10px;
+        font-size: 10.5pt;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-shadow: none !important;
+        text-shadow: none !important;
     }
 
     body {
@@ -354,125 +365,136 @@ a {
         padding: 0;
         background: #ffffff;
         color: #111827;
-        line-height: 1.28;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.32;
     }
 
     .resume {
         width: 100%;
         max-width: none;
-        min-height: auto;
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) 54mm;
+        margin: 0;
+        display: block;
+        background: #ffffff;
         border-radius: 0;
         overflow: visible;
-        box-shadow: none;
-        page-break-after: avoid;
-        zoom: 0.96;
     }
 
     .content {
-        padding: 0 5mm 0 0;
+        padding: 0;
     }
 
     .sidebar {
-        padding: 0 0 0 5mm;
-        background: #ffffff;
-        color: #111827;
-        border-left: 1px solid #d7dee8;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
-
-    .profile-picture {
-        width: 24mm;
-        height: 24mm;
-        margin-bottom: 4mm;
-        border-radius: 5mm;
-        border: 1px solid #d7dee8;
-        box-shadow: none;
+        display: none;
     }
 
     .hero {
-        padding-bottom: 4mm;
+        padding-bottom: 5mm;
+        border-bottom: 1px solid #cfd7e3;
     }
 
     .hero h1 {
-        font-size: 1.85rem;
+        color: #111827;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24pt;
+        line-height: 1;
     }
 
     .hero h2 {
-        margin-top: 2mm;
-        font-size: 0.95rem;
+        margin-top: 2.5mm;
+        color: #4b5563;
+        font-size: 11pt;
+        font-weight: 700;
     }
 
     .summary {
-        margin-top: 3mm;
+        margin-top: 3.5mm;
         max-width: none;
-        font-size: 0.9rem;
+        color: #1f2937;
+        font-size: 10.5pt;
+    }
+
+    .eyebrow,
+    .language-switcher {
+        display: none;
+    }
+
+    .print-contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5mm 4mm;
+        margin-top: 3mm;
+        color: #374151;
+        font-size: 9.5pt;
+        list-style: none;
+    }
+
+    .print-contact li {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .print-contact li + li::before {
+        content: "|";
+        margin-right: 4mm;
+        color: #9ca3af;
     }
 
     .section {
-        margin-top: 4mm;
+        margin-top: 5mm;
     }
 
     .section-heading {
         margin-bottom: 2mm;
+        border-bottom: 1px solid #d7dee8;
+    }
+
+    .section-heading h3 {
+        padding-bottom: 1.2mm;
+        color: #111827;
+        font-size: 9.5pt;
+        letter-spacing: 0.08em;
     }
 
     .entry {
-        padding: 2.4mm 3mm;
-        border-radius: 3mm;
-        background: #ffffff;
-    }
-
-    .entry + .entry {
-        margin-top: 2mm;
-    }
-
-    .entry-head {
-        gap: 4mm;
-        margin-bottom: 1mm;
-    }
-
-    .entry-head h4 {
-        font-size: 0.94rem;
-    }
-
-    .entry-head span,
-    .entry p,
-    .info-list li {
-        font-size: 0.84rem;
-    }
-
-    .panel + .panel {
-        margin-top: 4mm;
-    }
-
-    .panel h3 {
-        margin-bottom: 2mm;
-        color: #253548;
-        font-size: 0.76rem;
-    }
-
-    .info-list {
-        gap: 2mm;
-    }
-
-    .info-list li {
-        padding: 1.6mm 0;
+        padding: 0;
         border: 0;
-        border-bottom: 1px solid #e1e7ef;
         border-radius: 0;
         background: #ffffff;
     }
 
-    .contact-icon {
-        filter: none;
-        opacity: 0.7;
+    .entry + .entry {
+        margin-top: 3.5mm;
     }
 
-    .language-switcher {
-        display: none;
+    .compact-entry + .compact-entry {
+        margin-top: 2.5mm;
+    }
+
+    .entry-head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 5mm;
+        margin-bottom: 0.8mm;
+    }
+
+    .entry-head h4 {
+        color: #111827;
+        font-size: 10.5pt;
+        font-weight: 700;
+    }
+
+    .entry-head span {
+        flex: 0 0 auto;
+        max-width: 82mm;
+        color: #4b5563;
+        font-size: 9.3pt;
+        text-align: right;
+    }
+
+    .entry p {
+        color: #1f2937;
+        font-size: 10pt;
     }
 
     .entry,

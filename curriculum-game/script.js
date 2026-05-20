@@ -15,6 +15,9 @@ const translations = {
             additional: "Datos adicionales",
             contact: "Contacto"
         },
+        print: {
+            license: "Permiso de conducir y vehículo propio"
+        },
         experience: {
             ntt: {
                 period: "Prácticas FCT | Marzo 2025 - Mayo 2025",
@@ -68,6 +71,9 @@ const translations = {
             languages: "Languages",
             additional: "Additional Details",
             contact: "Contact"
+        },
+        print: {
+            license: "Driver's license and own vehicle"
         },
         experience: {
             ntt: {
